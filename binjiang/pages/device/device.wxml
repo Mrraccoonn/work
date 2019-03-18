@@ -1,0 +1,46 @@
+<image src='../image/wei2.jpg' class='bgimg'></image>
+<view class='contain'>
+  <view class='inforsear'>
+    <view class='viewli'>
+      <picker class='picker' value="{{index}}" range="{{array}}" bindchange="bindPickerChange">
+        <text class='sname'>设备类型：</text>
+        <text class='choosedata'>{{array[index]}}</text>
+      </picker>
+    </view>
+    <view class='deviceview'>
+      <text class='sname'>设备名称：</text>
+      <input type='text' class='inputsearch' placeholder-class="phcolor" placeholder='请输入完整的设备名称' bindinput='watchdevicename' value='{{devicename}}'/>
+      <view class='viewicon'>
+        <icon type="search" size="20" color='#fff' class='iconsearch' bindtap='devicesearch'/>
+      </view>
+    </view>
+  </view>
+  <scroll-view class="table" scroll-y="true" style="height: 910rpx" wx:if="{{tabledevicebtn}}" bindscrolltolower='scrolltolower'>
+    <view class="tr">
+      <view class="th">设备名称</view>
+      <view class="th">亮灯状态</view>
+      <view class="th">故障状态</view>
+      <view class="th">控制柜位置</view>
+    </view>
+    <view class="tr" wx:for="{{devicelists}}" wx:for-index="index" wx:for-item="item">
+      <view class="td">{{item.clientName}}</view>
+      <view class="td">{{item.loop1Status==0?'关灯':'开灯'}}</view>
+      <view class="td">{{item.dropped==0?'故障':'正常'}}</view>
+      <view class="td">{{item.clientAddress}}</view>
+    </view>
+  </scroll-view>
+   <scroll-view class="table" scroll-y="true" style="height: 910rpx" wx:if="{{tablelightbtn}}" bindscrolltolower='scrolltolower'>
+    <view class="tr">
+      <view class="th">设备名称</view>
+      <view class="th">当前状态</view>
+      <view class="th">故障状态</view>
+      <view class="th">光源信息</view>
+    </view>
+    <view class="tr" wx:for="{{lightlists}}" wx:for-index="index" wx:for-item="item">
+      <view class="td">{{item.clientName}}</view>
+      <view class="td">{{item.runStatus==0?'关':'开'}}</view>
+      <view class="td">{{item.status==0?'异常':'正常'}}</view>
+      <view class="td">{{item.lightInfo1+'w'}}</view>
+    </view>
+  </scroll-view>
+</view>

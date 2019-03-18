@@ -1,0 +1,35 @@
+<image src='../image/wei2.jpg' class='bgimg'></image>
+<view>
+<view class='ul'>
+<view class="li lidetile {{active==1?'show':''}}" animation="{{animationData}}">
+    <view class='vtext'><text>派单号：</text><text>2432545343</text></view>
+    <view class='vtext'><text>指派时间：</text><text>2018-08-02 12:23:40</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 18:23:40</text></view>
+    <view class='vtext'><text>设备名：</text><text>江滨177</text></view>
+    <view class='vtext'><text>具体位置：</text><text>江陵南路与滨文路口西面</text></view>
+    <view class='vtext'><text>故障类型：</text><text>功率不足</text></view>
+    <view class='vtext'><text>故障描述：</text><text class='detiletext'>实时功率=0.0,基准功率=0.052,告警比例=22,互感器倍率=1</text></view>  
+</view>
+<view class="li lidetile {{active==2?'show':''}}" animation="{{animationData}}">
+<view class='change'><text>备注：</text><textarea class='textbeizhu' /></view>
+    <view class='change'><text>图片：</text><image src='../image/add.png' class='imgadd' bindtap="onfo"></image></view>
+    <view class='viewimg'><view class='imgpicview'><image src="{{tempFilePaths[0]}}" class='imgpic'></image></view><view class='imgpicview'><image src="{{tempFilePaths[1]}}" class='imgpic'></image></view></view>
+    <view class='change'><text>扫码：</text><image src='../image/add.png' class='imgadd' bindtap='getnum'></image><view class='manumber'><input type='number' disabled='true'/></view></view>
+</view>
+<view class="li {{active==3?'show':''}}" animation="{{animationData}}">
+<scroll-view class="table" scroll-y="true" style="height: 920rpx">
+    <view class='viewul'>
+          <view class='viewli'><view class='viewp'>洪媛</view><view class='viewp'>2018-04-12 12:32</view><view class='processtext'>江滨177实时功率=0.0,基准功率=0.052,告警比例=22,互感器倍率=1</view><view class='position'><image src='../image/arrow.png' class='arrow'></image><view class='pstext'>指派</view></view></view>
+    </view>
+    <view class='viewul'>
+          <view class='viewli'><view class='viewp'>小胖</view><view class='viewp'>2018-04-12 12:32</view><view class='processtext'>故障处理中</view><view class='position'><image src='../image/arrow.png' class='arrow'></image><view class='pstext'>未解决</view></view></view>
+    </view>
+    <view class='viewul'>
+          <view class='viewli'><view class='viewp'>小胖</view><view class='viewp'>2018-04-12 12:32</view><view class='processtext'>故障处理成功</view><view class='position'><image src='../image/arrow.png' class='arrow'></image><view class='pstext'>已解决</view></view></view>
+    </view>
+    <view class='end'>结束</view>
+</scroll-view>
+</view>
+</view>
+<view class='viewbottom'><view class='viewmargin'><view data-active="1" class="viewview {{active==1?'active':''}}" bindtap="activejs" style='border-right: 1px solid #d2d9e9;' hover-class="blue_hover">详细信息</view><view  hover-class="blue_hover" class="viewview {{active==2?'active':''}}" style='border-right: 1px solid #d2d9e9;' bindtap="activejs" data-active="2">操作</view><view class="viewview {{active==3?'active':''}}" bindtap="activejs" data-active="3"  hover-class="blue_hover">派单跟踪</view></view></view>
+</view>

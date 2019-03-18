@@ -1,0 +1,31 @@
+.li{ width: 640rpx; height: 940rpx; border: 1px solid #d2d9e9; font-size: 16px; color: #fff; margin: 0rpx auto;padding: 20rpx; border-radius: 8rpx; background: rgba(0, 0, 0, 0.3);  line-height: 66rpx; position: relative; display: none; padding-top: 30rpx;transition:1s} 
+.lidetile{width: 600rpx;padding-left: 60rpx;}
+.ul{height: 1050rpx; white-space: nowrap; padding-top:20rpx; }
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.textbeizhu{ width: 460rpx; height: 230rpx; display: inline-block; vertical-align: top; background: rgba(0, 0, 0, 0.2);  border-radius: 6rpx; margin-top: 10rpx; padding: 20rpx; box-sizing: border-box; line-height: 50rpx;}
+.change{ margin-top: 30rpx;}
+.imgadd{width: 44rpx; height: 44rpx;  display: inline-block; vertical-align: middle; margin-top: -6rpx;}
+.imgpic{width: 240rpx; height: 370rpx;display: inline-block}
+.manumber{width: 360rpx; height: 60rpx;  display: inline-block;  vertical-align: top; background: rgba(0, 0, 0, 0.2);  border-radius: 6rpx; margin-top: 4rpx; margin-left: 15rpx; padding: 0 20rpx;}
+.viewbottom{ width: 100%; display: inline-block; text-align: center;position: absolute; bottom: 40rpx; left: 0rpx;}
+.viewmargin{  display:inline-block; border-radius: 10rpx; overflow: hidden}
+.viewview{ background: #156ec0; width: 225rpx; color: #fff; display: inline-block; line-height: 80rpx; text-align: center;}
+.blue_hover{ background: rgba(21, 110, 192, 0.8);}
+.viewimg{ width: 600rpx; margin: 0 auto; display: inline-block; text-align: center;}
+.imgpicview{ display: inline-block; margin: 20rpx;}
+.arrow{ width:40rpx; height: 75rpx; }
+.viewul{ margin-left:5rpx; margin-bottom: 100rpx;border-radius: 8rpx;}
+.viewli{ width: 500rpx; border: 1px solid #d2d9e9; background:rgba(0, 0, 0, 0.1); position: relative; margin: 0 auto; border-radius: 8rpx; }
+.viewp{ border-bottom: 1px solid #d2d9e9; text-align: center; line-height: 80rpx;}
+.position{ position: absolute; left: 230rpx; bottom: -110rpx;}
+.pstext{ position: absolute; left: 50rpx; top: -6rpx; font-size: 14px;}
+.end{ margin: 0 auto; width: 300rpx; height: 100rpx; border-radius: 8rpx; line-height: 100rpx; background: #11a0f8; text-align: center}
+.processtext{ line-height: 70rpx; text-align: center;  width: 400rpx;  display:block;white-space: pre-line; margin: 0 auto;}
+.vtext{ font-size: 16px; padding: 20rpx 0;}
+.detiletext{white-space:pre-line;}
+.active{ background: #11a0f8;}
+.show{ display: block}

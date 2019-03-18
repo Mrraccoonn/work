@@ -1,0 +1,68 @@
+<image src='../image/wei2.jpg' class='bgimg'></image>
+<view class='contain'>
+  <view class='inforsear'>
+    <view class='viewli'>
+      <picker class='picker' value="{{index}}" range="{{array}}" bindchange="bindPickerChange">
+        <text class='sname'>设备类型：</text>
+        <text class='choosedata'>{{array[index]}}</text>
+      </picker>
+    </view>
+    <view class='viewli' style='margin-left:28rpx'>
+      <picker class='picker' range="{{alarmtype}}" value="{{typeindex}}" bindchange="bindalarmChange">
+        <text class='sname'>故障类型：</text>
+        <text class='choosedata'>{{alarmtype[typeindex]}}</text>
+      </picker>
+    </view>
+    <view>
+      <text class='sname' style='line-height:80rpx'>产生时间：</text>
+      <picker mode="multiSelector" value="{{dateTime1}}" class='picker timepick' bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+        <view class="tui-picker-detail">
+          <text class='timestyle'>起始时间：</text> <text wx:if="{{starttime}}">{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view>
+      <picker mode="multiSelector" value="{{dateTime}}" class='picker timepick' bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+        <view class="tui-picker-detail">
+          <text class='timestyle'>结束时间：</text> <text wx:if="{{endtime}}">{{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class='deviceview'>
+      <text class='sname'>设备名称：</text>
+      <input type='text' class='inputsearch' placeholder-class="phcolor" placeholder='请输入完整的设备名称'  bindinput='inputsearch' />
+      <view class='viewicon'>
+        <icon type="search" size="20" color='#fff' class='iconsearch' bindtap='alarmsearch' />
+      </view>
+    </view>
+  </view>
+  <scroll-view class="table" scroll-y="true" style="height: 710rpx" bindscrolltolower='scrolltolower'>
+    <view class="tr">
+      <view class="th">设备名称</view>
+      <view class="th">故障类型</view>
+      <view class="th">产生时间</view>
+      <view class="th">故障描述</view>
+    </view>
+    <view class="tr" wx:for="{{alarmlists}}" wx:for-index="index" wx:for-item="item">
+      <view class="td">{{item.clientName}}</view>
+      <view class="td"><text wx:if='{{item.warnType==1||item.warnType==14||item.warnType==20}}'>通信故障</text><text wx:if='{{item.warnType==13}}'>灯具故障</text><text wx:if='{{item.warnType==17}}'>电源故障</text></view>
+      <view class="td">{{item.gmtCreate}}</view>
+      <view class="td blue" bindtap="open" data-content='{{item.warnContent}}'>
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class='mark' wx:if="{{condition}}">
+  <view class='markcon'>
+    <view class='contitle'>
+      <text>故障描述</text>
+      <view class='i' bindtap="close">
+        <image src='../image/cha.png'></image>
+      </view>
+    </view>
+    <view class='viewcon'>
+      <text class='alarmtext'>{{warnContent}}</text>
+    </view>
+  </view>
+</view>

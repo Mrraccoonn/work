@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/welcome/welcome",
+    "pages/upload/upload",
+    "pages/dispatch/dispatch",
+    "pages/alarm/alarm",
+    "pages/device/device"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#11a0f8",
+    "navigationBarTitleText": "告警信息",
+    "navigationBarTextStyle": "white"
+  }
+}

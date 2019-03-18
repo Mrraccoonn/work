@@ -1,0 +1,7 @@
+.bgimage{ width: 750rpx; height: 100%; position: absolute; z-index: -1;}
+.weltitle{ color: #fff; font-size: 50rpx; font-weight: bold; letter-spacing: 2rpx; width: 100%; text-align: center; display: inline-block; margin-top: 70rpx; margin-bottom: 100rpx;}
+.inputul{ width: 500rpx;  margin: 0 auto; margin-top: 200rpx;}
+.inputli{width: 100%; position: relative; margin-bottom: 40rpx;}
+.inputicon{ position: absolute; display: inline-block; width: 36rpx; height:40rpx; left: 20rpx; top: 27rpx;}
+.logininput{ width: 100%; height: 90rpx; background: #fff; border-radius: 8rpx; box-sizing: border-box; padding: 0 40rpx;padding-left: 100rpx; font-size:32rpx;}
+.loginbtn{ height: 90rpx; background: #5494db; line-height: 90rpx; color: #fff;}

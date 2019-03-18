@@ -1,0 +1,32 @@
+/* pages/alarm/alarm.wxss */
+page{ background: linear-gradient(to right,#1f2547 0%, #012c4f 100%); height: 100%; width: 100%;}
+.mark{width:100%; height:100%; position: fixed; left:0; top:0; background-color:rgba(0,0,0,0.2); z-index:20;font-size: 14px;}
+.markcon{background: #fff; width:500rpx;position: absolute; right: 0; left: 0; bottom:0;top: 0;  margin: auto; display: inline-table; }
+.contain{ font-size: 14px;font-family: "Noto Sans CJK SC", "Source Han Sans CN"; display: flex; flex-direction:column; width:100%; padding: 20rpx; padding-top: 0rpx; box-sizing: border-box; background: rgba(0,0,0,0.3); color: #fff; height: 100%;}
+.inforsear{margin-top: 20rpx;}
+.picker{ border-bottom:1px solid rgba(255,255,255,0.8); height: 70rpx; line-height: 70rpx;}
+.table {border:1px solid #d2d9e9;border-right: 0;
+border-bottom: 0;width: 100%; margin: 0 auto; margin-top: 30rpx; font-size: 13px;}
+.tr {width: 100%;display: flex;justify-content: space-between;}
+.tr:nth-child(odd){background: rgba(0, 0, 0,0.2);}
+.td {padding: 10px;border-bottom: 1px solid #dadada;border-right: 1px solid #dadada;
+text-align: center;width:100%}
+.th {font-weight: bold;background: rgba(0, 0, 0,0.2);padding: 10px;border-bottom: 1px solid #dadada;border-right: 1px solid #dadada; color: #9b8bb2;
+text-align: center;width:100%
+}
+.eye{width: 40rpx; height: 24rpx;}
+.inputsearch{ border: 1px solid rgba(255,255,255,0.8); display: inline-block; width: 286rpx; height: 60rpx;  vertical-align: top;  padding: 0 20rpx; line-height: 60rpx; font-size: 13px;  margin-top: 6rpx; margin-left: 8rpx;}
+.phcolor{ color: rgba(255, 255, 255, 0.6)}
+.viewli{ width: 48%; display: inline-block}
+.deviceview{ height: 70rpx; padding: 15rpx 0; margin-top: 20rpx;}
+.sname{height: 70rpx; display: inline-block; line-height: 70rpx; font-weight: bold; vertical-align: top;}
+.choosedata{ color: rgba(255, 255, 255, 0.6); margin-left: 10rpx;}
+.iconsearch{ display:block; text-align: center; margin-top: 12rpx;}
+.viewicon{ height: 64rpx; width: 100rpx; background: #0097fe; display: inline-block; border-radius: 5rpx; float: right; margin-top: 6rpx;}
+.blue{display: flex;align-items: center; justify-content: center;}
+.timepick{ margin-top: 10rpx;}
+.contitle{width:100%; color: #fff; background: #1460a7; height: 65rpx; line-height: 65rpx; text-indent: 20rpx; font-weight: bold;}
+.i{ position: absolute; right: 35rpx; top: 5rpx; width:26rpx; height: 26rpx; }
+.i image{ width:30rpx; height: 30rpx;}
+.viewcon{ padding: 40rpx; box-sizing: border-box; width: 500rpx; display: inline-block;}
+.alarmtext{ width: 420rpx;  display: inline-block;word-wrap:break-word;  line-height: 45rpx; color: #2ea3fe; font-size: 15px; text-align: center}

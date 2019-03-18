@@ -1,0 +1,60 @@
+<image src='../image/wei2.jpg' class='bgimg'></image>
+<view class='tabbg'>
+<view class='mainbg'  animation="{{animationData}}">
+ <scroll-view class="ul {{active==1?'show':''}}" scroll-y="true">
+    <navigator url = "/pages/upload/upload" class='li'>
+    <view class='color'>1</view>
+    <view class='vtext'><text>派单号：</text><text>2432545343</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 12:23:40</text></view>
+    <view class='vtext'><text>设备名：</text><text>江滨177</text></view>
+    </navigator>
+    <navigator url = "/pages/upload/upload" class='li'>
+    <view class='color'>2</view>
+    <view class='vtext'><text>派单号：</text><text>5638035346</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 15:26:34</text></view>
+    <view class='vtext'><text>设备名：</text><text>信盛092</text></view>
+    </navigator>
+    <navigator url = "/pages/upload/upload" class='li'>
+    <view class='color'>3</view>
+   <view class='vtext'><text>派单号：</text><text>4353545665</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 13:34:24</text></view>
+    <view class='vtext'><text>设备名：</text><text>月桂207</text></view>
+    </navigator>
+
+    <navigator url = "/pages/upload/upload" class='li'>
+    <view class='color'>4</view>
+    <view class='vtext'><text>派单号：</text><text>1455352427</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 14:24:27</text></view>
+    <view class='vtext'><text>设备名：</text><text>支康088</text></view>
+    </navigator>
+    </scroll-view>
+    <scroll-view class="ul {{active==1?'show':''}}" scroll-y="true">
+    <navigator url = "/pages/upload/upload" class='li'>
+    <view class='color'>1</view>
+    <view class='vtext'><text>派单号：</text><text>3243467326</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 15:43:40</text></view>
+    <view class='vtext'><text>设备名：</text><text>陵康037</text></view>
+    </navigator>
+    <navigator url = "/pages/upload/upload" class='li'>
+    <view class='color'>2</view>
+    <view class='vtext'><text>派单号：</text><text>4367822890</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 10:23:25</text></view>
+    <view class='vtext'><text>设备名：</text><text>陵闻006</text></view>
+    </navigator>
+    <navigator url = "/pages/upload/upload" class='li'>
+    <view class='color'>3</view>
+    <view class='vtext'><text>派单号：</text><text>1468043432</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 15:23:42</text></view>
+    <view class='vtext'><text>设备名：</text><text>六东125</text></view>
+    </navigator>
+
+    <navigator url = "/pages/upload/upload" class='li'>
+    <view class='color'>4</view>
+    <view class='vtext'><text>派单号：</text><text>3247876529</text></view>
+    <view class='vtext'><text>截止时间：</text><text>2018-08-02 11:21:24</text></view>
+    <view class='vtext'><text>设备名：</text><text>六新127</text></view>
+    </navigator>
+    </scroll-view>
+    </view>
+    </view>
+    <view class='viewbottom'><view class='viewmargin'><view  style='border-right: 1px solid #d2d9e9;'  data-active="1" class="viewview {{active==1?'active':''}}" bindtap="activejs" hover-class="blue_hover">当前派单</view><view  data-active="2" class="viewview {{active==2?'active':''}}" bindtap="activejs" hover-class="blue_hover">历史派单</view></view></view>

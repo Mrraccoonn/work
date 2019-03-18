@@ -1,0 +1,10 @@
+<!--pages/welcome/welcome.wxml-->
+<image src='../image/rebg.jpg' class='bgimage'></image>
+<text class='weltitle'>滨江路灯监控维护系统</text>
+<view class='echart'>
+    <view class='echartc caolv'><text class='echartctext'>节能率</text><text>{{energySavingRate}}%</text></view><view class='echartc qinglv'><text class='echartctext'>亮灯率</text><text>{{lightRate}}%</text></view><view class='echartc danred'><text class='echartctext'>故障告警</text><text>{{alarmnum}}</text></view><view class='echartc orange'><text class='echartctext'>综合评价</text><text>及格</text></view>
+</view>
+<view class='tabview'><view class='view-btn'><navigator url = "/pages/device/device"><button class='whated'>设备</button></navigator></view><view class='view-btn'><navigator url = "/pages/alarm/alarm"><button class='whated'>告警</button></navigator></view><view class='view-btn'><navigator url = "/pages/dispatch/dispatch"><button class='whated'>派单</button></navigator></view></view>
+
+
+

@@ -1,0 +1,148 @@
+<image src='../image/wei2.jpg' class='bgimg'></image>
+<view>
+<view class='ul'>
+<view class="li lidetile {{active==1?'show':''}}" animation="{{animationData}}">
+    <view class='vtext'><view class='deviceview'>
+        <text class='sname'>设备名称：</text>
+        <input type='text' class='inputsearch' placeholder-class="phcolor" placeholder='请输入完整的设备名称' />
+    </view></view>
+    <view class='vtext'><picker class='picker' value="{{index}}" range="{{array}}" bindchange="bindPickerChange">
+        <text class='sname'>设备类型：</text>
+        <text class='choosedata'>{{array[index]}}</text>
+      </picker></view>
+    <view class='vtext'><picker class='picker' range="{{alarmtype}}" value="{{typeindex}}" bindchange="bindalarmChange">
+        <text class='sname'>故障类型：</text>
+        <text class='choosedata'>{{alarmtype[typeindex]}}</text>
+      </picker></view>
+    <view class='vtext'><picker mode="multiSelector" value="{{dateTime1}}" class='picker timepick' bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+        <view class="tui-picker-detail">
+          <text class='timestyle'>起始时间：</text> {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+        </view>
+      </picker></view>
+    <view class='vtext'><text>故障描述：</text><textarea class='textbeizhu'></textarea></view>
+    <view class='submit'>提交</view>  
+</view>
+<view class="li lidetile {{active==2?'show':''}}" animation="{{animationData}}">
+<scroll-view class="table" scroll-y="true" style="height: 760rpx">
+    <view class="tr">
+      <view class="th">选择</view>
+      <view class="th">设备名称</view>
+      <view class="th">故障类型</view>
+      <view class="th">故障描述</view>
+    </view>
+    <view class="tr">
+      <view class="td"><checkbox  class='radio'/></view>
+      <view class="td">宏盛101</view>
+      <view class="td">通信故障</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+    <view class="tr">
+     <view class="td"><checkbox class='radio' /></view>
+      <view class="td">湘西142</view>
+      <view class="td">通信故障</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+    <view class="tr">
+     <view class="td"><checkbox class='radio' /></view>
+      <view class="td">长湘109</view>
+      <view class="td">缺项</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+    <view class="tr">
+     <view class="td"><checkbox class='radio' /></view>
+      <view class="td">支康088</view>
+      <view class="td">通信故障</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+    <view class="tr">
+     <view class="td"><checkbox class='radio' /></view>
+      <view class="td">阡和032</view>
+      <view class="td">功率不足</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+    <view class="tr">
+     <view class="td"><checkbox class='radio' /></view>
+      <view class="td">浦园133</view>
+      <view class="td">断电</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+    <view class="tr">
+     <view class="td"><checkbox class='radio' /></view>
+      <view class="td">时文东065</view>
+      <view class="td">通信故障</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+    <view class="tr">
+     <view class="td"><checkbox class='radio' /></view>
+      <view class="td">西兴069</view>
+      <view class="td">缺项</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+    <view class="tr">
+     <view class="td"><checkbox class='radio' /></view>
+      <view class="td">信康087</view>
+      <view class="td">功率不足</view>
+      <view class="td blue" bindtap="open">
+        <image src='../image/detile.png' class='eye'></image>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='submit' bindtap='submit'>指派</view>
+</view>
+</view>
+<view class='viewbottom'><view class='viewmargin'><view data-active="1" class="viewview {{active==1?'active':''}}" bindtap="activejs" style='border-right: 1px solid #d2d9e9;' hover-class="blue_hover">告警报修</view><view  hover-class="blue_hover" class="viewview {{active==2?'active':''}}" style='border-right: 1px solid #d2d9e9;' bindtap="activejs" data-active="2">新派任务</view></view></view>
+</view>
+<view class='mark' wx:if="{{condition}}">
+  <view class='markcon'>
+    <view class='contitle'>
+      <text>故障描述</text>
+      <view class='i' bindtap="close">
+        <image src='../image/cha.png'></image>
+      </view>
+    </view>
+    <view class='viewcon'>
+      <text class='alarmtext'>江滨177实时功率=0.0,基准功率=0.052,告警比例=22,互感器倍率=1</text>
+    </view>
+  </view>
+</view>
+<view class='mark' wx:if="{{servicebtn}}">
+  <view class='markcon'>
+    <view class='contitle'>
+      <text>维修人员选择</text>
+      <view class='i' bindtap="serviceclose">
+        <image src='../image/cha.png'></image>
+      </view>
+    </view>
+    <view class='viewcon'>
+      <view class='serviceli'><picker class='mpicker' value="{{indexman}}" range="{{arrayman}}" bindchange="bindPickerChangeman">
+        <text class='msname'>维修人员：</text>
+        <text class='mchoosedata'>{{arrayman[indexman]}}</text>
+      </picker></view>
+      <view class='serviceli'><picker class='mpicker' value="{{indextime}}" range="{{arraytime}}" bindchange="bindPickerChangetime">
+        <text class='msname'>时间选择：</text>
+        <text class='mchoosedata'>{{arraytime[indextime]}}</text>
+      </picker></view>
+      <view class='serviceli'>
+      <text class='msname'>设备名称：</text>
+      <input type='text' class='servicebeizhu' placeholder-class="sercolor" placeholder='请输入完整的设备名称' />
+      </view>
+      <view class='serviceconfirm' bindtap="serviceclose">确认</view>
+    </view>
+  </view>
+</view>

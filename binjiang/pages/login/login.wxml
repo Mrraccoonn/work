@@ -1,0 +1,11 @@
+<image src='../image/rebg.jpg' class='bgimage'></image>
+<text class='weltitle'>滨江路灯告警维护系统</text>
+<view class='inputul'>
+    <view class='inputli'>
+        <image src='../image/user.png' class='inputicon'></image><input placeholder='请输入用户名' class='logininput' bindinput='watchname'></input>
+    </view>
+    <view class='inputli'>
+        <image src='../image/password.png' class='inputicon'></image><input placeholder='请输入密码' class='logininput' type='password' bindinput='watchpassword'></input>
+    </view>
+    <button class='loginbtn' bindtap='login'>登录</button>
+</view>
